@@ -18,4 +18,14 @@ Test: "Should display inputted value of crust"
 Code: UI Logic : let crust = $("input[name=crust]:checked").val();
 Expected Output: Sourdough/Wheat/Gluten-Free;
 
-Test: "
+Test: "Should show price of selected input:
+Code: Pizza.prototype.getPrice = function() {
+  if (this.size === "Small") {
+    this.price = 10;
+  } else if (this.size === "Medium") {
+    this.price = 14;
+  } else if (this.size === "Large") {
+    this.price = 18;
+  };
+Expected Output: selected "Small" display 10.
+

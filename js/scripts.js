@@ -6,17 +6,18 @@ function Pizza(size, crust, sauce, protein, toppings)  {
   this.sauce = sauce;
   this.protein = protein;
   this.toppings = toppings;
-  this.price = 0;
+  this.price = 1;
 }
 
 Pizza.prototype.getPrice = function() {
-  if (this.size === "sm") {
+  if (this.size === "Small") {
     this.price = 10;
-  } else if (this.size === "md") {
+  } else if (this.size === "Medium") {
     this.price = 14;
-  } else if (this.size === "lrg") {
+  } else if (this.size === "Large") {
     this.price = 18;
   };
+  console.log(this.price);
   if (this.crust === "Sourdough") {
     this.price += 1;
   } else if (this.crust === "Wheat")  {
@@ -24,6 +25,7 @@ Pizza.prototype.getPrice = function() {
   } else if (this.crust === "glutenFree") {
     this.price += 3;
   };
+  console.log(this.price);
   if (this.protein === "Chicken") {
     this.price += 1;
   } else if (this.protein === "Sausage") {
@@ -31,6 +33,7 @@ Pizza.prototype.getPrice = function() {
   } else if (this.protein === "Pepperoni") {
     this.price += 1;
   };
+  console.log(this.price);
   if (this.sauce === "Marinara") {
     this.price += 1;
   } else if (this.sace === "White") {
@@ -38,6 +41,7 @@ Pizza.prototype.getPrice = function() {
   } else if (this.sauce === "Oil") {
     this.price += 1;
   }
+  console.log(this.price);
 
   this.price += this.toppings.length;
   console.log(this.toppings.length);
