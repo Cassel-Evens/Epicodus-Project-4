@@ -1,51 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-Us">
 <head>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <div id="header">
-    <h1>Lonnies Pizza</h1>
-  </div>
-  <div id="menu">
-    <form id="menu">
+  <div class="container">
+    <h1>Ronnies Pizza Parlor</h1>
+    <hr>
+    <form id="pizza">
       <div id="menuSelect">
-        <label for="bread">Bread:</label>
-        <select class="form-control" id="bread">
-          <option value="GF">Gluten Free</option>
-          <option value="Sourdough">Sourdough</option>
-          <option value="Wheat">Wheat</option>
-        </select>
+        <p><span>Select a size</span></p>
+        <div class="form-group">
+          <input type="radio" name="size" value="Small 10'"> Small 10"<br>
+          <input type="radio" name="size" value="Medium 12'"> Medium 12"<br>
+          <input type="radio" name="size" value="Large 16'"> Large 16"<br>
+        </div>
       </div>
       <div id="menuSelect">
-        <label for="sauce">Sauce:</label>
-        <select class="form-control" id="sauce">
-          <option value="white">White Sauce</option>
-          <option value="red">Red Sauce</option>
-          <option value="oil">Olive Oil Base</option>
-        </select>
+        <p><span>Select a Crust</span></p>
+        <div class="form-group">
+          <input type="radio" name="crust" value="Sourdough"> Sourdough<br>
+          <input type="radio" name="crust" value="Wheat"> Wheat<br>
+          <input type="radio" name="crust" value="GlutenFree"> Gluten-Free<br>
+        </div>
       </div>
       <div id="menuSelect">
-        <label for="protein">Protein:</label>
-        <select class="form-control" id="protein">
-          <option value="pep">Pepperoni</option>
-          <option value="sausage">Sausage</option>
-          <option value="chicken">Chicken</option>
-        </select>
+        <p><span>Select a Sauce</span></p>
+        <div class="form-group">
+          <input type="radio" name="sauce" value="Marinara"> Marinara<br>
+          <input type="radio" name="sauce" value="White"> White Sauce<br>
+          <input type="radio" name="sauce" value="Oil"> Olive Oil<br>
+        </div>
       </div>
       <div id="menuSelect">
-      <label for="veggie">Veggie:</label>
-      <select class="form-control" id="veggie">
-        <option value="pepper">Bell Pepper</option>
-        <option value="artichoke">Artichoke</option>
-        <option value="olive">Olive</option>
-      </select>  
+        <p><span>Select a Protein</span></p>
+        <div class="form-group">
+          <input type="radio" name="protein" value="Chicken">Chicken<br>
+          <input type="radio" name="protein" value="Sausage">Sausage<br>
+          <input type="radio" name="protein" value="Pepperoni">Pepperoni<br>
+        </div>
       </div>
+      <div id="menuSelect">
+        <p><span>Select additional Toppings</span></p>
+        <div class="form-group">
+          <input type="checkbox" name="topping" value="Mushroom"> Mushrooms<br>
+          <input type="checkbox" name="topping" value="Pepper"> Green Peppers<br>
+          <input type="checkbox" name="topping" value="Onion"> Onion<br>
+          <input type="checkbox" name="topping" value="Artichoke"> Artichoke<br>
+          <input type="checkbox" name="topping" value="Jalepeno"> Jalepeno<br>
+          <input type="checkbox" name="topping" value="Extra cheese"> Extra Cheese<br>
+        </div>
+      </div>
+      <hr>
+      <button type="submit"><span>Finish Order</span></button>
     </form>
+    <div id="output">
+    <div class="col-md-12">
+      <p id="yourOrder">Your Order: </p>
+      <div id="order">
   </div>
 </body>
-</html>

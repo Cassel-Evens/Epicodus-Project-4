@@ -4,3 +4,6 @@
   margin-left: 20px;
   width: 50%;
 }
+#yourOrder {
+  display: none;
+}
