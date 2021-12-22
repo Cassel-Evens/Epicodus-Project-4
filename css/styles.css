@@ -1,9 +1,38 @@
+body {
+  background-color: #0b6c8a;
+}
+hr {
+  width: 60%;
+}
+#header {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#header h1 {
+  color: rgb(184, 179, 179);
+}
+#pizzaMenu {
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
 #menuSelect {
   padding: 2px;
   margin-bottom: 20px;
   margin-left: 20px;
-  width: 50%;
+  
 }
-#yourOrder {
+#finalOrder {
   display: none;
+  border: 2px solid black;
+  padding: 5px;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  background-color: rgb(255, 255, 255);
 }

@@ -8,59 +8,101 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Ronnies Pizza Parlor</h1>
-    <hr>
-    <form id="pizza">
-      <div id="menuSelect">
-        <p><span>Select a size</span></p>
+  <div id="header">
+    <h1>Ronnies Pizza</h1>
+  </div>
+  <hr>
+  <div id="pizzaMenu">
+    <div class="container">
+      <form id="pizza-toppings">
         <div class="form-group">
-          <input type="radio" name="size" value="Small'"> Small 10"<br>
-          <input type="radio" name="size" value="Medium'"> Medium 12"<br>
-          <input type="radio" name="size" value="Large'"> Large 16"<br>
+          <div id="menuSelect">
+            <h2>Select your crust size:</h2>
+            <label>
+              <input type="radio" name="crust" value="10" checked>
+              Small (12in)
+            </label>
+            <label>
+              <input type="radio" name="crust" value="12">
+              Medium (14in)
+            </label>
+            <label>
+              <input type="radio" name="crust" value="16">
+              Large (16in)
+            </label>
+          </div>
+          <div class="form-group">
+            <div id="menuSelect">
+              <h3>Choose One Meat:</h3>
+              <label>
+                <input type="radio" name="topping1" value="1" checked>
+                  Pepperoni 
+              </label>
+              <label>
+                <input type="radio" name="topping1" value="2">
+                Sausage
+              </label>
+              <label>
+                <input type="radio" name="topping1" value="3">
+                Canadian Bacon
+              </label>
+              <label>
+                <input type="radio" name="topping1" value="0">
+                Veggie
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div id="menuSelect">
+              <h3>Choose One Vegetable:</h3>
+              <label>
+                <input type="radio" name="topping2" value="1" checked>
+                  Onions
+              </label>
+              <label>
+                <input type="radio" name="topping2" value="2">
+                  Olives
+              </label>
+              <label>
+                <input type="radio" name="topping2" value="3">
+                  Bell Pepper
+              </label>
+              <label>
+                <input type="radio" name="topping2" value="2">
+                  Artichoke
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div id="menuSelect">
+              <h3>Choose Your Sauce</h3>
+              <label>
+                <input type="radio" name="topping3" value="1" checked>
+                  Marinara
+              </label>
+              <label>
+                <input type="radio" name="topping3" value="1">
+                  Olive Oil
+              </label>
+              <label>
+                <input type="radio" name="topping3" value="2">
+                  White Sauce
+              </label>
+              <label>
+                <input type="radio" name="topping3" value="2">
+                  Ricotta & Marinara
+              </label>
+            </div>
+          </div>
+        <button type="submit" class="btn btn-primary">Place Order:</button>
         </div>
-      </div>
-      <div id="menuSelect">
-        <p><span>Select a Crust</span></p>
-        <div class="form-group">
-          <input type="radio" name="crust" value="Sourdough"> Sourdough<br>
-          <input type="radio" name="crust" value="Wheat"> Wheat<br>
-          <input type="radio" name="crust" value="GlutenFree"> Gluten-Free<br>
-        </div>
-      </div>
-      <div id="menuSelect">
-        <p><span>Select a Sauce</span></p>
-        <div class="form-group">
-          <input type="radio" name="sauce" value="Marinara"> Marinara<br>
-          <input type="radio" name="sauce" value="White"> White Sauce<br>
-          <input type="radio" name="sauce" value="Oil"> Olive Oil<br>
-        </div>
-      </div>
-      <div id="menuSelect">
-        <p><span>Select a Protein</span></p>
-        <div class="form-group">
-          <input type="radio" name="protein" value="Chicken">Chicken<br>
-          <input type="radio" name="protein" value="Sausage">Sausage<br>
-          <input type="radio" name="protein" value="Pepperoni">Pepperoni<br>
-        </div>
-      </div>
-      <div id="menuSelect">
-        <p><span>Select additional Toppings</span></p>
-        <div class="form-group">
-          <input type="checkbox" name="topping" value="Mushroom"> Mushrooms<br>
-          <input type="checkbox" name="topping" value="Pepper"> Green Peppers<br>
-          <input type="checkbox" name="topping" value="Onion"> Onion<br>
-          <input type="checkbox" name="topping" value="Artichoke"> Artichoke<br>
-          <input type="checkbox" name="topping" value="Jalepeno"> Jalepeno<br>
-          <input type="checkbox" name="topping" value="Extra cheese"> Extra Cheese<br>
-        </div>
-      </div>
-      <hr>
-      <button type="submit"><span>Finish Order</span></button>
-    </form>
-    <div id="output">
-    <div class="col-md-12">
-      <p id="yourOrder">Your Order: </p>
-      <div id="order">
+      </form>
+    </div>
+  </div>
+  <div id="finalOrder">
+    <h4>You Owe Ronnies:</h4>
+    <p>$<span id="cost"></span></p>
+    <button type="button" value="Finished" onClick="refresh(this)">Finished</button>
   </div>
 </body>
+</html>  
