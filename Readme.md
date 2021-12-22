@@ -8,3 +8,6 @@ Test: "Should return correct pricing on toppings"
 Code: createCost(); 
 Expected Output: 1, 2, or 3;
 
+Test: "Should return cost with size + toppings" 
+Code: createCost(); 
+Expected Output: small + cost of toppings. medium + cost of toppings large + cost of toppings.
